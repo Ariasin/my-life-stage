@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선물, 대비 그리고 관찰 | 나의 삶 연출 계획안</title>
+    <!-- Tailwind CSS & Google Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- 정갈하고 가독성 좋은 서체 조합 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;500;700;950&family=Pretendard:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: {
+                            50: '#f4f7f5',
+                            100: '#e5ebe6',
+                            800: '#1e3328',
+                            900: '#112219',
+                        },
+                        terracotta: {
+                            500: '#d96a43',
+                            600: '#c25832',
+                        },
+                        sand: {
+                            50: '#fcfbf7',
+                            100: '#f7f4ec',
+                            200: '#eee8d5',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Noto Serif KR', 'serif'],
+                        sans: ['Pretendard', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* 부드러운 스크롤 바 및 에디토리얼 레이아웃 */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fcfbf7;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e3328;
+            border-radius: 4px;
+        }
+        .text-justify-custom {
+            text-align: justify;
+            text-justify: inter-character;
+        }
+    </style>
+</head>
+<body class="bg-sand-50 text-slate-800 font-sans leading-relaxed antialiased">
+
+    <!-- 1. GLOBAL NAVIGATION BAR -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-sand-50/80 border-b border-forest-100">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="#" class="font-serif font-black text-xl text-forest-800 tracking-wider flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-terracotta-500 inline-block animate-pulse"></span>
+                THE STAGE
+            </a>
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-forest-800">
+                <a href="#intro" class="hover:text-terracotta-500 transition-colors">기획 의도</a>
+                <a href="#present" class="hover:text-terracotta-500 transition-colors">01. 선물</a>
+                <a href="#contrast" class="hover:text-terracotta-500 transition-colors">02. 대비</a>
+                <a href="#observation" class="hover:text-terracotta-500 transition-colors">03. 관찰과 환경</a>
+                <a href="#timeline" class="hover:text-terracotta-500 transition-colors">04. 나의 궤적</a>
+                <a href="#gather" class="bg-forest-800 text-sand-50 px-4 py-2 rounded-full hover:bg-terracotta-500 transition-all">소통하기</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 2. HERO LANDING SECTION -->
+    <section id="hero" class="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-12 px-6">
+        <div class="absolute inset-0 z-0 pointer-events-none opacity-40">
+            <div class="absolute top-1/4 left-1/10 w-96 h-96 rounded-full bg-forest-100 filter blur-3xl"></div>
+            <div class="absolute bottom-1/4 right-1/10 w-80 h-80 rounded-full bg-sand-200 filter blur-2xl"></div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto text-center z-10">
+            <span class="text-xs uppercase tracking-[0.3em] text-terracotta-500 font-bold mb-4 block">A Personal Life-Curation Webpage</span>
+            <h1 class="font-serif font-black text-4xl sm:text-5xl text-forest-900 leading-tight mb-8">
+                나의 삶 연출 계획안 : <br>
+                <span class="text-terracotta-500 underline decoration-forest-100 decoration-wavy">선물, 대비</span> 그리고 <span class="text-forest-800">관찰</span>
+            </h1>
+            <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+                내가 어떤 사람이고 무슨 생각을 하며 사는지 공유하기 위한 기록 공간입니다.<br>저와 비슷한 미래를 고민하는 사람들과 이야기를 나누고 싶습니다.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#intro" class="w-full sm:w-auto px-8 py-4 bg-forest-800 text-sand-50 rounded-lg shadow-lg hover:bg-forest-900 transition-all font-semibold tracking-wide text-sm">
+                    전시 들어가기
+                </a>
+                <a href="#gather" class="w-full sm:w-auto px-8 py-4 border border-forest-800 text-forest-800 rounded-lg hover:bg-forest-100/30 transition-all font-medium text-sm">
+                    방명록 남기기 (소통관)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. INTRODUCTION: THE RATIONALE (기획 의도) -->
+    <section id="intro" class="py-24 bg-forest-900 text-sand-100 relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5">
+                    <span class="text-terracotta-500 text-xs uppercase tracking-widest font-bold block mb-2">Philosophy of Space</span>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-sand-50 mb-6 leading-snug">
+                        왜 '인터넷 포트폴리오'인가?
+                    </h2>
+                    <p class="text-sm text-sand-200/80 font-light border-t border-sand-200/20 pt-4 leading-relaxed">
+                        인터넷을 통한 연결 속에 많은 기회가 있다고 생각합니다. 저라는 사람이 걸어온 길을 기록하고 공유하는 일에서부터 시작하고자 합니다.
+                    </p>
+                </div>
+                <div class="lg:col-span-7 space-y-6 text-justify-custom text-sand-100/80 text-base font-light leading-relaxed">
+                    <p>
+                        제가 어떤 생각을 마주하며 살아왔고, 앞으로 어떤 미래를 그리며 나아갈지 이 웹페이지에 진솔하게 담아보았습니다. 제가 올려둔 기록들을 통해 나와 비슷한 경험을 했던 사람들, 혹은 나와 닮은 미래를 고민하는 사람들을 만나고 연결될 수 있다면 좋겠습니다.
+                    </p>
+                    <div class="bg-forest-800/80 p-6 rounded-lg border border-sand-200/10">
+                        <p class="italic text-sand-50 font-normal leading-relaxed text-sm mb-0">
+                            "이 웹 아카이브는 '서민서'라는 사람의 과거, 현재, 미래를 보여줍니다. 저와 비슷한 미래를 꿈꾸는 사람들과 소통하고 싶습니다."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SECTION 1: PRESENT (오늘이라는 선물) -->
+    <section id="present" class="py-24 bg-sand-100 relative">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- 이미지 영역 (인터랙티브 갤러리) -->
+                <div class="order-2 lg:order-1 space-y-4">
+                    <div class="relative">
+                        <div class="absolute -top-3 -left-3 w-full h-full border-2 border-forest-800 rounded-2xl z-0 pointer-events-none"></div>
+                        <div class="rounded-2xl overflow-hidden shadow-2xl relative z-10 aspect-[4/3] bg-forest-900">
+                            <!-- 메인 뷰어 이미지 (기본: 1번 사진) -->
+                            <img id="gift-main-img" 
+                                 src="1.jpg" 
+                                 alt="오늘의 선물 같은 풍경" 
+                                 class="w-full h-full object-cover opacity-95 transition-all duration-500 ease-in-out hover:scale-105"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/800x600/112219/eee8d5?text=Moment+of+Today'">
+                            <!-- 캡션 레이블 -->
+                            <span id="gift-caption" class="absolute bottom-4 left-4 text-xs text-sand-50 bg-black/60 px-3 py-1.5 rounded backdrop-blur-sm transition-all duration-300">
+                                🌊 모래사장과 파도소리, 그리고 마음을 노래하는 낭만의 한때
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <!-- 9구 그리드 썸네일 컨트롤러 -->
+                    <div class="bg-white/80 p-3 rounded-xl border border-forest-100 shadow-md">
+                        <p class="text-[11px] uppercase tracking-wider text-forest-800 font-bold mb-2 flex items-center gap-1">
+                            <i class="fa-regular fa-images text-terracotta-500"></i> 소소하게 누려온 일상의 선물들 (클릭해서 감상)
+                        </p>
+                        <div class="grid grid-cols-5 gap-2">
+                            <!-- 01 (기타 치는 바다) -->
+                            <button onclick="changeGiftView('1.jpg', '🌊 모래사장과 파도소리, 그리고 마음을 노래하는 낭만의 한때', this)" 
+                                    class="aspect-square rounded-lg overflow-hidden border-2 border-terracotta-500 focus:outline-none transition-all duration-300 thumbnail-btn">
+                                <img src="1.jpg" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/100x100/112219/ffffff?text=1'">
+                            </button>
+                            <!-- 02 (등산하는 아이들) -->
+                            <button onclick="changeGiftView('2.jpg', '⛰️ 나무 지팡이 하나씩 짚고 힘차게 올라가던 가을 산속 언덕길', this)" 
+                                    class="aspect-square rounded-lg overflow-hidden border border-slate-200 hover:border-forest-800 focus:outline-none transition-all duration-300 thumbnail-btn">
+                                <img src="2.jpg" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/100x100/112219/ffffff?text=2'">
+                            </button>
+                            <!-- 03 (바다 앞 미소) -->
+                            <button onclick="changeGiftView('3.jpg', '☀️ 푸른 바다를 뒤에 두고 불어오는 바람을 기분 좋게 맞이하던 때', this)" 
+                                    class="aspect-square rounded-lg overflow-hidden border border-slate-200 hover:border-forest-800 focus:outline-none transition-all duration-300 thumbnail-btn">
+                                <img src="3.jpg" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/100x100/112219/ffffff?text=3'">
+                            </button>
+                            <!-- 04 (넓은 산책로) -->
+                            <button onclick="changeGiftView('4.jpg', '🌳 푸른 나무들과 들판 언덕을 천천히 걸어갔던 오후의 여정', this)" 
+                                    class="aspect-square rounded-lg overflow-hidden border border-slate-200 hover:border-forest-800 focus:outline-none transition-all duration-300 thumbnail-btn">
+                                <img src="4.jpg" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/100x100/112219/ffffff?text=4'">
+                            </button>
+                            <!-- 05 (센강 에펠탑) -->
+                            <button onclick="changeGiftView('5.jpg', '🗼 구름 아래 유람선과 잔잔히 흐르던 물줄기 너머 보이던 에펠탑', this)" 
+                                    class="aspect-square rounded-lg overflow-hidden border border-slate-200 hover:border-forest-800 focus:outline-none transition-all duration-300 thumbnail-btn">
+                                <img src="5.jpg" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/100x100/112219/ffffff?text=5'">
+                            </button>
+                            <!-- 06 (사찰 지붕) -->
+                            <button onclick="changeGiftView('6.jpg', '⛩️ 조용하고 단정한 사찰 기와지붕 아래에서 만난 평온함', this)" 
+                                    class="aspect-square rounded-lg overflow-hidden border border-slate-200 hover:border-forest-800 focus:outline-none transition-all duration-300 thumbnail-btn">
+                                <img src="6.jpg" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/100x100/112219/ffffff?text=6'">
+                            </button>
+                            <!-- 07 (백구) -->
+                            <button onclick="changeGiftView('7.jpg', '🐕 조용한 앞마당에서 정겨운 얼굴로 지그시 바라보던 하얀 진돗개', this)" 
+                                    class="aspect-square rounded-lg overflow-hidden border border-slate-200 hover:border-forest-800 focus:outline-none transition-all duration-300 thumbnail-btn">
+                                <img src="7.jpg" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/100x100/112219/ffffff?text=7'">
+                            </button>
+                            <!-- 08 (빌딩과 나무) -->
+                            <button onclick="changeGiftView('8.jpg', '🌿 도심 속 높은 회색 빌딩 숲과 대비되던 고운 초록 단풍잎', this)" 
+                                    class="aspect-square rounded-lg overflow-hidden border border-slate-200 hover:border-forest-800 focus:outline-none transition-all duration-300 thumbnail-btn">
+                                <img src="8.jpg" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/100x100/112219/ffffff?text=8'">
+                            </button>
+                            <!-- 09 (바다 수영) -->
+                            <button onclick="changeGiftView('9.jpg', '🏊 시원한 파도 속에 뛰어들어 걱정 없이 수영을 즐기던 한때', this)" 
+                                    class="aspect-square rounded-lg overflow-hidden border border-slate-200 hover:border-forest-800 focus:outline-none transition-all duration-300 thumbnail-btn">
+                                <img src="9.jpg" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/100x100/112219/ffffff?text=9'">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 텍스트 영역 -->
+                <div class="order-1 lg:order-2 space-y-6">
+                    <span class="text-terracotta-500 font-bold uppercase tracking-widest text-xs">Theme 01. The Gift of Today</span>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-black text-forest-800 leading-tight">
+                        원하는 목표를 이루지 못하더라도,<br>우리가 살아있다는 사실 자체가 선물입니다
+                    </h2>
+                    <div class="space-y-4 text-slate-600 text-sm sm:text-base text-justify-custom font-light">
+                        <p>
+                            우리는 살아가면서 많은 목표를 세우고 노력합니다. 전액 장학생이 되기 위해 밤을 새우고, 가고 싶었던 기업에 원서를 넣고 합격을 기다리거나, 마음이 가는 이상형을 만나 관계를 꿈꾸기도 합니다. 이런 추구와 노력들이 삶을 더 풍요롭게 만드는 동력이 되는 것은 사실입니다.
+                        </p>
+                        <p class="font-semibold text-forest-800">
+                            하지만 앞만 보고 정신없이 질주하다 보면, 정작 우리가 숨을 쉬고 살아있다는 사실 자체가 가장 큰 선물이라는 점을 가끔 잊어버리곤 합니다.
+                        </p>
+                        <p>
+                            장학생이 되지 못하더라도, 취업에 한 번에 성공하지 못하더라도, 원하던 인연과 이어지지 못해도 우리는 여전히 가치 있는 존재입니다. 오감을 열어 바람을 느끼고, 눈앞에 펼쳐진 푸른 여름의 풍경을 감상하고, 머릿속으로 세상을 이해하고 사유하는 즐거움은 언제나 우리 곁에 있습니다. 그리고 이런 즐거움을 만끽하는 데에는 어떠한 경쟁도, 제한시간도 필요하지 않습니다.
+                        </p>
+                    </div>
+                    <div class="bg-forest-800 p-5 rounded-xl text-sand-50 shadow-inner">
+                        <p class="mb-0 font-serif text-sm leading-relaxed italic text-sand-100">
+                            "우리는 그저 오늘 하루를 살아가면 됩니다. 그 순간 우리는 주어진 오늘이 과거에도 미래에도 없을 소중한 시간임을 깨닫게 됩니다. 누군가의 말처럼 현재(Present)는 우리 모두에게 주어진 선물(Present)입니다."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SECTION 2: CONTRAST (선물의 의무와 대비) -->
+    <section id="contrast" class="py-24 bg-sand-50 relative">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- 텍스트 영역 -->
+                <div class="space-y-6">
+                    <span class="text-terracotta-500 font-bold uppercase tracking-widest text-xs">Theme 02. Paradox of Gift</span>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-black text-forest-800 leading-tight">
+                        공짜가 아닌 오늘의 평화,<br>내일을 위한 선물을 포장하고자 합니다
+                    </h2>
+                    <div class="space-y-4 text-slate-600 text-sm sm:text-base text-justify-custom font-light">
+                        <p>
+                            어린아이처럼 삶이라는 선물을 온전히 즐기는 일도 소중하지만, 이 즐거움이 결코 그냥 주어지지 않는다는 현실을 인지하는 것이 삶의 두 번째 이야기입니다.
+                        </p>
+                        <p>
+                            우리가 마시는 깨끗한 물, 들이쉬는 맑은 공기, 따스한 햇살은 항상 거저 주어지는 것일까요? 정교한 정화 기술과 인프라가 작동하지 않는다면 깨끗한 공기와 물은 유지되기 어렵습니다. 부패한 정치나 부당한 권력 아래에 놓이게 된다면 누구나 평등하게 햇빛을 받으며 걸어 다닐 자유마저 잃게 됩니다. 개인의 노력과 올바른 문화가 있어야 건강도 지켜질 수 있습니다.
+                        </p>
+                        <p class="font-semibold text-slate-800">
+                            결국 오늘 제가 누리는 평화로운 하루는 과거 누군가가 무수한 노력으로 '대비'해 준 선물인 셈입니다.
+                        </p>
+                    </div>
+                    
+                    <div class="border-l-4 border-forest-800 pl-6 py-2">
+                        <h4 class="font-serif font-bold text-lg text-forest-800 mb-2">대비하는 삶과 공대생의 역할</h4>
+                        <p class="text-slate-600 text-sm mb-0">
+                            감사하게도 오늘의 선물은 과거의 나와 과거의 사람들이 마련해 주었습니다. 그렇다면 다음 세대를 위한 선물을 준비하는 일은 누구의 몫일까요? 바로 오늘을 사는 우리라고 생각합니다. 사람의 생존에 필요한 필수적인 요소들을 안전하게 보존하여 다음 세대에 온전히 넘겨주는 일, 그것이 제가 공대에 진학하여 환경과 인프라 기술에 깊은 관심을 둔 이유입니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 이미지 영역 (인터랙티브 보이지 않는 수고 관찰 뷰어) -->
+                <div class="space-y-4">
+                    <div class="relative">
+                        <div class="absolute -bottom-3 -left-3 w-full h-full border-2 border-terracotta-500 rounded-2xl z-0 pointer-events-none"></div>
+                        <div class="rounded-2xl overflow-hidden shadow-2xl relative z-10 aspect-[4/3] bg-forest-900">
+                            <img id="contrast-main-img" 
+                                 src="10.jpg" 
+                                 alt="안전을 점검하는 인프라 엔지니어들" 
+                                 class="w-full h-full object-cover opacity-90 transition-all duration-500 ease-in-out hover:scale-105"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/800x600/1e3328/eee8d5?text=Infrastructure+Safety'">
+                            <span id="contrast-caption" class="absolute bottom-4 left-4 text-xs text-sand-50 bg-black/60 px-3 py-1.5 rounded backdrop-blur-sm transition-all duration-300">
+                                👷 보이지 않는 곳에서 안전을 점검하고 기술적 인프라를 지탱하는 고마운 손길들
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <!-- 3구 역할 탭 컨트롤러 -->
+                    <div class="grid grid-cols-3 gap-2">
+                        <!-- 탭 1 (인프라 엔지니어) -->
+                        <button onclick="changeContrastView('10.jpg', '👷 보이지 않는 곳에서 안전을 점검하고 기술적 인프라를 지탱하는 고마운 손길들', this)" 
+                                class="p-2.5 rounded-lg border-2 border-terracotta-500 bg-white hover:bg-sand-100 text-left transition-all duration-300 contrast-tab-btn flex flex-col justify-between h-20">
+                            <span class="text-[9px] uppercase font-mono tracking-wider text-terracotta-500 font-bold block">01. INFRASTRUCTURE</span>
+                            <span class="font-serif text-xs font-bold text-forest-800 leading-tight">안전 기술 설계</span>
+                        </button>
+                        <!-- 탭 2 (도시 환경 관리) -->
+                        <button onclick="changeContrastView('11.jpg', '🧹 깨끗하고 쾌적한 환경을 위해 일상의 뒤편에서 자원의 올바른 순환을 돕는 이웃들의 땀방울', this)" 
+                                class="p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-sand-100 text-left transition-all duration-300 contrast-tab-btn flex flex-col justify-between h-20">
+                            <span class="text-[9px] uppercase font-mono tracking-wider text-slate-400 font-bold block">02. SANITATION</span>
+                            <span class="font-serif text-xs font-bold text-forest-800 leading-tight">도시 자원 청결</span>
+                        </button>
+                        <!-- 탭 3 (외벽 유지보수) -->
+                        <button onclick="changeContrastView('12.jpg', '🏢 우리가 매일 마주하는 현대적인 일상이 늘 무탈하게 유지되도록 애써주시는 현장의 기술자들', this)" 
+                                class="p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-sand-100 text-left transition-all duration-300 contrast-tab-btn flex flex-col justify-between h-20">
+                            <span class="text-[9px] uppercase font-mono tracking-wider text-slate-400 font-bold block">03. MAINTENANCE</span>
+                            <span class="font-serif text-xs font-bold text-forest-800 leading-tight">일상 인프라 유지</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. SECTION 3: OBSERVATION (ACT 수업과 환경문제의 실증적 관찰) -->
+    <section id="observation" class="py-24 bg-forest-800 text-sand-50 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <!-- 섹션 헤더 -->
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-terracotta-500 font-bold uppercase tracking-widest text-xs block mb-2">Theme 03. Science & ACT Integration</span>
+                <h2 class="font-serif text-2xl sm:text-4xl font-black mb-4">소통의 첫 단추 : '관찰'</h2>
+                <p class="text-sand-100/70 font-light text-sm sm:text-base">ACT 수업에서 배운 태도로, 우리 삶을 둘러싼 실질적 환경 문제를 마주하다</p>
+                <div class="w-16 h-1 bg-terracotta-500 mx-auto mt-6"></div>
+            </div>
+
+            <!-- 핵심 철학: 인식 변화와 공학적 솔루션의 동행 -->
+            <div class="bg-forest-900/60 border border-sand-200/10 rounded-2xl p-8 mb-12">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-8 space-y-4">
+                        <span class="text-xs font-mono uppercase bg-terracotta-500/20 text-terracotta-500 px-3 py-1 rounded-full">Environmental Engineering Mission</span>
+                        <h3 class="font-serif font-black text-xl sm:text-2xl text-sand-50">막연한 구호를 넘어 실제 해결책을 보완하는 엔지니어의 눈</h3>
+                        <p class="text-sand-100/80 text-sm sm:text-base leading-relaxed text-justify-custom font-light">
+                            환경보호의 가치를 알리고 실천을 독려하는 <strong class="text-terracotta-500">대중적인 환경 캠페인</strong>은 사람들의 인식을 일깨워 행동을 유도하는 참 고마운 활동입니다. 저는 이러한 선한 마음과 목소리에 공감하는 동시에, 실제로 오염물질을 걸러내고 환경을 개선할 수 있는 단단한 정화 시스템과 시스템적 해결책을 마련하는 <strong class="text-sand-50">환경 엔지니어(Environmental Engineer)</strong>로 성장하고 싶습니다.
+                        </p>
+                        <p class="text-sand-100/80 text-sm sm:text-base leading-relaxed text-justify-custom font-light">
+                            15주 동안 &lt;ACT&gt; 수업을 들으며 중요하게 느낀 가치는 '관찰'이었습니다. 타인을 연기하고 소통할 때, 상대방의 실제 상황과 필요를 관찰하지 않으면 소통이 아닌 일방적인 나의 요구만 강요하게 됨을 알았습니다. 환경 문제를 연구할 때도 선입견을 내려놓고 현장의 구체적인 오염 상태와 데이터를 있는 그대로 '관찰'하는 것부터 시작하고자 합니다.
+                        </p>
+                    </div>
+                    <div class="lg:col-span-4 bg-forest-800 p-6 rounded-xl border border-sand-200/10 text-center">
+                        <i class="fa-solid fa-microscope text-5xl text-terracotta-500 mb-4"></i>
+                        <h4 class="font-bold text-base mb-2">선입견 없는 관찰</h4>
+                        <p class="text-xs text-sand-200/70 leading-relaxed">꼼꼼한 사실 관찰과 구체적인 데이터를 바탕으로, 다음 세대에게 깨끗하게 넘겨줄 인프라 기술을 준비하겠습니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4대 환경 문제 큐레이션 관 (멀티 페이지 슬라이더) -->
+            <div class="bg-forest-900/40 border border-sand-200/10 rounded-2xl overflow-hidden shadow-2xl">
+                <!-- 페이지 탭 헤더 -->
+                <div class="flex flex-wrap border-b border-sand-200/10 bg-forest-900/80">
+                    <button onclick="switchObsPage(1)" id="obs-tab-1" class="flex-1 min-w-[120px] py-4 px-6 text-center text-xs sm:text-sm font-semibold border-b-2 border-terracotta-500 text-terracotta-500 focus:outline-none transition-all">
+                        1관. 태평양 쓰레기 지대
+                    </button>
+                    <button onclick="switchObsPage(2)" id="obs-tab-2" class="flex-1 min-w-[120px] py-4 px-6 text-center text-xs sm:text-sm font-semibold text-sand-200/50 hover:text-sand-50 focus:outline-none transition-all">
+                        2관. 분리수거율의 진실
+                    </button>
+                    <button onclick="switchObsPage(3)" id="obs-tab-3" class="flex-1 min-w-[120px] py-4 px-6 text-center text-xs sm:text-sm font-semibold text-sand-200/50 hover:text-sand-50 focus:outline-none transition-all">
+                        3관. 미세플라스틱의 침투
+                    </button>
+                    <button onclick="switchObsPage(4)" id="obs-tab-4" class="flex-1 min-w-[120px] py-4 px-6 text-center text-xs sm:text-sm font-semibold text-sand-200/50 hover:text-sand-50 focus:outline-none transition-all">
+                        4관. 서울시 매립지 위기
+                    </button>
+                </div>
+
+                <!-- 4개 독립 페이지 컨텐츠 블록 -->
+                <div class="p-6 md:p-10 min-h-[420px] relative text-sand-100">
+                    
+                    <!-- Issue Page 1 -->
+                    <div id="obs-page-1" class="transition-all duration-300 block">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                            <div class="lg:col-span-7 space-y-4">
+                                <span class="text-terracotta-500 font-mono text-xs uppercase tracking-widest block">OBSERVATION PAGE 01</span>
+                                <h4 class="font-serif text-xl sm:text-2xl font-bold text-sand-50">태평양 플라스틱 쓰레기 지대 (GPGP) 문제</h4>
+                                <p class="text-sand-100/80 text-sm leading-relaxed text-justify-custom font-light">
+                                    중학생 때 태평양 한가운데에 프랑스 영토의 세 배에 달하는 거대한 쓰레기 대륙이 둥둥 떠다닌다는 사실을 처음 들었을 때 무척 놀랐습니다. 우리가 일상에서 별생각 없이 썼던 일회용 플라스틱 컵이나 페트병이 바다로 모여 해양 생물들의 숨통을 죄고 있었습니다.
+                                </p>
+                                <p class="text-sand-100/80 text-sm leading-relaxed text-justify-custom font-light">
+                                    시민들이 생활 속에서 플라스틱 소비를 조금씩 줄여가는 실천은 당연히 소중하고 시작점이 됩니다. 저는 여기에 더해, 바다에 떠다니는 엄청난 양의 미세 잔해들을 효율적으로 수거하고 걸러내는 해류 기반 포집 시스템이나 기계적 해결 방안에 학업적으로 깊이 기여하고 싶습니다.
+                                </p>
+                            </div>
+                            <div class="lg:col-span-5 relative">
+                                <div class="rounded-xl overflow-hidden aspect-[4/3] bg-forest-950 shadow-md">
+                                    <img src="13.jpg" 
+                                         alt="태평양 해양 쓰레기 섬 실태" 
+                                         class="w-full h-full object-cover opacity-80"
+                                         onerror="this.onerror=null; this.src='https://placehold.co/800x600/112219/eee8d5?text=Ocean+Plastic+Crisis'">
+                                </div>
+                                <span class="absolute bottom-2 left-2 text-[10px] bg-black/40 text-sand-100 px-2 py-0.5 rounded">태평양 그물과 해양 유입 폐기물 현황</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Issue Page 2 -->
+                    <div id="obs-page-2" class="transition-all duration-300 hidden">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                            <div class="lg:col-span-7 space-y-4">
+                                <span class="text-terracotta-500 font-mono text-xs uppercase tracking-widest block">OBSERVATION PAGE 02</span>
+                                <h4 class="font-serif text-xl sm:text-2xl font-bold text-sand-50">낮은 실질 분리수거율과 실효성 문제</h4>
+                                <p class="text-sand-100/80 text-sm leading-relaxed text-justify-custom font-light">
+                                    우리는 아침마다 플라스틱, 비닐, 유리병을 열심히 정돈해 분류하여 버립니다. 우리나라의 분리수거율 자체는 세계적으로 매우 높은 수준이지만, 세척 상태가 좋지 않거나 여러 재질이 복잡하게 섞여 있어 실질적으로 가공되어 다시 자원으로 재생되는 비율은 생각보다 무척 낮다고 합니다.
+                                </p>
+                                <p class="text-sand-100/80 text-sm leading-relaxed text-justify-custom font-light">
+                                    시민들의 분리배출 노력은 매우 의미 있는 원동력입니다. 하지만 수거 이후의 기술적 대안이 뒷받침되지 않으면 이 많은 노력이 헛수고로 돌아가기 쉽습니다. 인공지능 기반 고속 선별 장치나 수거된 자원을 고순도로 재생하는 화학적 분해 공정 등을 실제로 연구해보고 싶은 것도 바로 이러한 괴리를 줄이기 위함입니다.
+                                </p>
+                            </div>
+                            <div class="lg:col-span-5 relative">
+                                <div class="rounded-xl overflow-hidden aspect-[4/3] bg-forest-950 shadow-md">
+                                    <img src="14.png" 
+                                         alt="분리배출 쓰레기통 재활용 분류" 
+                                         class="w-full h-full object-cover opacity-80"
+                                         onerror="this.onerror=null; this.src='https://placehold.co/800x600/112219/eee8d5?text=Recycling+Reality'">
+                                </div>
+                                <span class="absolute bottom-2 left-2 text-[10px] bg-black/40 text-sand-100 px-2 py-0.5 rounded">일반적인 재활용 분리수거함 지표 관찰</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Issue Page 3 -->
+                    <div id="obs-page-3" class="transition-all duration-300 hidden">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                            <div class="lg:col-span-7 space-y-4">
+                                <span class="text-terracotta-500 font-mono text-xs uppercase tracking-widest block">OBSERVATION PAGE 03</span>
+                                <h4 class="font-serif text-xl sm:text-2xl font-bold text-sand-50">인류와 생태계를 위협하는 미세플라스틱 문제</h4>
+                                <p class="text-sand-100/80 text-sm leading-relaxed text-justify-custom font-light">
+                                    큰 쓰레기는 눈에 잘 보여서 주워 담으면 되지만, 5mm 이하 크기로 마모되어 떠도는 미세플라스틱은 인간이 자각하지 못하는 사이에 다가옵니다. 강과 바다로 유입된 미세플라스틱은 바다 동물의 뱃속으로 들어가고, 결국 우리가 먹는 해산물이나 빗물을 타고 다시 사람의 몸속까지 파고들고 있습니다.
+                                </p>
+                                <p class="text-sand-100/80 text-sm leading-relaxed text-justify-custom font-light">
+                                    눈에 전혀 보이지 않는 이 작은 오염원에는 더 정밀하고 현대적인 분석 기법과 과학 도구가 필요합니다. 하수처리 단계나 수자원 정화 시 미세 입자들을 말끔히 여과하는 고성능 분리막이나 분해 공정에 관심을 가지고 깊이 있게 들여다보고 있습니다.
+                                </p>
+                            </div>
+                            <div class="lg:col-span-5 relative">
+                                <div class="rounded-xl overflow-hidden aspect-[4/3] bg-forest-950 shadow-md">
+                                    <img src="15.jpg" 
+                                         alt="해양 환경 비닐 백과 미세플라스틱 수치 모식" 
+                                         class="w-full h-full object-cover opacity-80"
+                                         onerror="this.onerror=null; this.src='https://placehold.co/800x600/112219/eee8d5?text=Microplastics+Danger'">
+                                </div>
+                                <span class="absolute bottom-2 left-2 text-[10px] bg-black/40 text-sand-100 px-2 py-0.5 rounded">해양 생물 주변의 플라스틱 마모 관찰도</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Issue Page 4 -->
+                    <div id="obs-page-4" class="transition-all duration-300 hidden">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                            <div class="lg:col-span-7 space-y-4">
+                                <span class="text-terracotta-500 font-mono text-xs uppercase tracking-widest block">OBSERVATION PAGE 04</span>
+                                <h4 class="font-serif text-xl sm:text-2xl font-bold text-sand-50">서울시 쓰레기 매립지 부족과 소각장 입지 문제</h4>
+                                <p class="text-sand-100/80 text-sm leading-relaxed text-justify-custom font-light">
+                                    수도권 매립지의 수용 공간 고갈과 매립 규정 강화로 폐기물 처리는 우리의 눈앞에 닥친 큰 문제가 되었습니다. 내가 쓴 쓰레기는 우리 지역 안에서 스스로 무해하게 처리해야 한다는 필요성이 강해지면서, 마포구의 소각 시설 추가 건립 등을 둘러싼 갈등도 사회적으로 깊어지고 있습니다.
+                                </p>
+                                <p class="text-sand-100/80 text-sm leading-relaxed text-justify-custom font-light">
+                                    주변 거주지 이웃분들의 정당한 건강 우려를 해결하기 위해서는, 무리한 요구나 일방적 희생이 아니라 기술적인 안전성과 확실한 정화 수치를 눈으로 입증해 주어야 합니다. 연소 과정에서 유해 가스나 냄새가 나지 않도록 차단하는 친환경 소각 및 정화 설비를 정밀하게 발전시켜, 상생 가능한 친환경 에너지 기지를 설계하는 일에 기여하고 싶습니다.
+                                </p>
+                            </div>
+                            <div class="lg:col-span-5 relative">
+                                <div class="rounded-xl overflow-hidden aspect-[4/3] bg-forest-950 shadow-md">
+                                    <img src="16.jpg" 
+                                         alt="덤프트럭 쓰레기 매립지 하역 현장" 
+                                         class="w-full h-full object-cover opacity-80"
+                                         onerror="this.onerror=null; this.src='https://placehold.co/800x600/112219/eee8d5?text=Landfill+Crisis'">
+                                </div>
+                                <span class="absolute bottom-2 left-2 text-[10px] bg-black/40 text-sand-100 px-2 py-0.5 rounded">지속적으로 유입되는 수도권 폐기물 하역 모니터링</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. SECTION 4: TIMELINE (과거-현재-미래의 흔적) -->
+    <section id="timeline" class="py-24 bg-sand-100 relative">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-terracotta-500 font-bold uppercase tracking-widest text-xs block mb-2">Chronicle of Growth</span>
+                <h2 class="font-serif text-2xl sm:text-4xl font-black text-forest-800">어제와 내일을 잇는 궤적</h2>
+                <p class="text-slate-500 font-light mt-2 text-sm sm:text-base">어린 날 품었던 순수한 생각에서 출발하여 다음 세대를 위한 '대비'로 나아가는 여정</p>
+                <div class="w-16 h-1 bg-forest-800 mx-auto mt-6"></div>
+            </div>
+
+            <!-- 다중 페이지 궤적 아카이브 뷰어 -->
+            <div class="bg-white rounded-2xl shadow-xl border border-forest-100 overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-12">
+                    
+                    <!-- 네비게이션 좌측 바 -->
+                    <div class="lg:col-span-4 bg-forest-900 text-sand-50 p-8 flex flex-col justify-between">
+                        <div class="space-y-6">
+                            <h4 class="font-serif font-bold text-lg tracking-wide border-b border-sand-200/20 pb-4 text-sand-100">
+                                <i class="fa-solid fa-journal-whills mr-2 text-terracotta-500"></i>
+                                세대별 연출 기록관
+                            </h4>
+                            <div class="flex flex-col gap-2">
+                                <button onclick="switchTimePage(1)" id="time-btn-1" class="w-full text-left py-3 px-4 rounded-lg bg-terracotta-500 text-sand-50 font-medium transition-all text-xs flex items-center gap-3">
+                                    <span class="font-mono text-xs text-sand-200">01</span> 중학생 시절 : 신재생에너지연구원의 꿈
+                                </button>
+                                <button onclick="switchTimePage(2)" id="time-btn-2" class="w-full text-left py-3 px-4 rounded-lg bg-forest-800 hover:bg-forest-100/10 text-sand-200/80 font-medium transition-all text-xs flex items-center gap-3">
+                                    <span class="font-mono text-xs text-sand-200/50">02</span> 고교 ~ 대학 : 기초 역량 축적
+                                </button>
+                                <button onclick="switchTimePage(3)" id="time-btn-3" class="w-full text-left py-3 px-4 rounded-lg bg-forest-800 hover:bg-forest-100/10 text-sand-200/80 font-medium transition-all text-xs flex items-center gap-3">
+                                    <span class="font-mono text-xs text-sand-200/50">03</span> 가까운 미래 : 제주도 플로깅 봉사
+                                </button>
+                                <button onclick="switchTimePage(4)" id="time-btn-4" class="w-full text-left py-3 px-4 rounded-lg bg-forest-800 hover:bg-forest-100/10 text-sand-200/80 font-medium transition-all text-xs flex items-center gap-3">
+                                    <span class="font-mono text-xs text-sand-200/50">04</span> 먼 미래 : 스위스 ETH 취리히 유학
+                                </button>
+                                <button onclick="switchTimePage(5)" id="time-btn-5" class="w-full text-left py-3 px-4 rounded-lg bg-forest-800 hover:bg-forest-100/10 text-sand-200/80 font-medium transition-all text-xs flex items-center gap-3">
+                                    <span class="font-mono text-xs text-sand-200/50">05</span> 최종 목표 : 다음 세대를 향한 선물의 이양
+                                </button>
+                            </div>
+                        </div>
+                        <p class="text-xs text-sand-200/40 mt-8">버튼을 클릭하시면 각 시기별 생각과 세부 기록들이 나타납니다.</p>
+                    </div>
+
+                    <!-- 우측 컨텐츠 영역 (5개 상세 다이어리 장) -->
+                    <div class="lg:col-span-8 p-8 md:p-12 bg-white">
+                        
+                        <!-- Timeline Page 1 -->
+                        <div id="time-page-1" class="space-y-6 block">
+                            <span class="text-terracotta-500 font-bold uppercase tracking-widest text-xs font-mono">CHAPTER 01</span>
+                            <h3 class="font-serif font-black text-2xl text-forest-800">1. 관심의 시작 : 중학생 시절, 거대 쓰레기 섬을 보고</h3>
+                            <div class="w-12 h-1 bg-terracotta-500"></div>
+                            <div class="text-slate-600 text-sm sm:text-base space-y-4 text-justify-custom font-light leading-relaxed">
+                                <p>
+                                    중학생 때, 태평양 한가운데 대륙 크기만 한 플라스틱 쓰레기 섬이 흘러 다닌다는 다큐멘터리를 보게 되었습니다. 버려진 작은 쓰레기들이 모여 지구를 뒤흔드는 큰 문제가 된다는 실상이 당시 저에게는 꽤 깊은 생각거리를 남겼습니다.
+                                </p>
+                                <p>
+                                    그때부터 환경문제에 대해 진지한 관심을 두게 되었고, 학교 가정통신문이나 생활기록부 진로 희망 란에 '신재생에너지연구원'이 되고 싶다고 당차게 적어 냈습니다. 비록 구체적으로 무엇을 어떻게 공부해야 할지는 몰랐지만, 소중한 지구를 조금이라도 건강하게 지키는 데 한몫하고 싶다는 순수한 다짐에서 출발한 저의 첫 이정표였습니다.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Page 2 -->
+                        <div id="time-page-2" class="space-y-6 hidden">
+                            <span class="text-terracotta-500 font-bold uppercase tracking-widest text-xs font-mono">CHAPTER 02</span>
+                            <h3 class="font-serif font-black text-2xl text-forest-800">2. 기초의 축적 : 고교 시절 학업과 대학교 로봇 동아리</h3>
+                            <div class="w-12 h-1 bg-terracotta-500"></div>
+                            <div class="text-slate-600 text-sm sm:text-base space-y-4 text-justify-custom font-light leading-relaxed">
+                                <p>
+                                    고등학생 시절에는 환경과 에너지에 관심은 많았지만, 우선 당장 제 앞에 주어진 목표인 입시를 위해 최선을 다해 공부했습니다. 공과대학에 무사히 진학하여 기술적 기초를 다지는 일이 다음 단계를 위해 꼭 거쳐야 할 정직한 계단이라고 여겼습니다.
+                                </p>
+                                <p>
+                                    대학에 들어온 지금은 학과 공부와 함께 로봇 동아리, 다양한 대내외 활동들을 하고 있습니다. 정밀 센서나 자율 제어 같은 기계·전자 기술들이 어떻게 해안가 폐기물 수거함이나 자원 자동 선별 시스템에 실제로 유용하게 얹어질 수 있을지 고민하며, 공학도로서 조금 더 구체적이고 실현 가능한 저만의 진로를 탐색하고 있습니다.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Page 3 -->
+                        <div id="time-page-3" class="space-y-6 hidden">
+                            <span class="text-terracotta-500 font-bold uppercase tracking-widest text-xs font-mono">CHAPTER 03</span>
+                            <h3 class="font-serif font-black text-2xl text-forest-800">3. 실천하는 관찰자 : 다가오는 여름방학 제주도 플로깅 자원봉사</h3>
+                            <div class="w-12 h-1 bg-terracotta-500"></div>
+                            <div class="text-slate-600 text-sm sm:text-base space-y-4 text-justify-custom font-light leading-relaxed">
+                                <p>
+                                    단순히 책상 앞에 앉아 수식이나 텍스트로만 오염을 마주하기보다, 제 손발로 현장의 실태를 꼼꼼히 '관찰'하는 실천이 필요하다고 생각했습니다. 그래서 이번 다가올 여름방학에는 제주도로 해변 쓰레기를 직접 주우며 활동하는 '플로깅 봉사활동'을 가기로 계획을 잡았습니다.
+                                </p>
+                                <p>
+                                    해수면의 온도 상승과 해안가 구석구석에 얽혀 방치된 어구, 버려진 생활 플라스틱을 직접 수거하면서 환경 문제의 실태와 깊게 대면해 보려고 합니다. 그 현장에서 주워 올 생생한 경험과 아이디어가, 장차 제가 연구할 기술의 좋은 밑거름이 될 거라 기대합니다.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Page 4 -->
+                        <div id="time-page-4" class="space-y-6 hidden">
+                            <span class="text-terracotta-500 font-bold uppercase tracking-widest text-xs font-mono">CHAPTER 04</span>
+                            <h3 class="font-serif font-black text-2xl text-forest-800">4. 졸업 이후의 도약 : 스위스 ETH Zurich 연방공과대 대학원 진학</h3>
+                            <div class="w-12 h-1 bg-terracotta-500"></div>
+                            <div class="text-slate-600 text-sm sm:text-base space-y-4 text-justify-custom font-light leading-relaxed">
+                                <p>
+                                    국내 대학 생활을 무사히 잘 마치면, 한 단계 더 넓고 고도화된 연구 환경에서 실질적인 대비 기술을 공부해 보고 싶습니다. 세계 최고의 환경 보존 시스템과 정화 기술에 대한 비전을 얻기 위해, 스위스의 ETH 취리히(취리히 연방공과대학교) 대학원 유학을 장기적으로 설계하고 있습니다.
+                                </p>
+                                <p>
+                                    수자원 정화 시뮬레이션, 미세 먼지 저감과 자원 재순환 공학 등 실효성 있는 폐기물 관리 기술 분야의 전문 역량을 지독히 다질 계획입니다. 저에게 지식을 전해준 사회의 고마운 인프라에 상응하는 진짜 지혜를 다듬어 보탬이 되고 싶습니다.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Page 5 -->
+                        <div id="time-page-5" class="space-y-6 hidden">
+                            <span class="text-terracotta-500 font-bold uppercase tracking-widest text-xs font-mono">CHAPTER 05</span>
+                            <h3 class="font-serif font-black text-2xl text-forest-800">5. 최종 비전 : 다음 세대를 위한 선물의 완벽한 이양</h3>
+                            <div class="w-12 h-1 bg-terracotta-500"></div>
+                            <div class="text-slate-600 text-sm sm:text-base space-y-4 text-justify-custom font-light leading-relaxed flex-grow relative overflow-hidden rounded-xl bg-slate-900 text-white min-h-[220px]">
+                                <img class="absolute inset-0 w-full h-full object-cover opacity-20" src="http://googleusercontent.com/image_collection/image_retrieval/6259356567042519574_0" alt="ETH Zurich 현대 공대 건물 배경" />
+                                <div class="relative z-10 p-6 md:p-8 space-y-4">
+                                    <p>
+                                        저의 마지막 삶의 지향점은 다음 세대가 이 땅에서 숨을 쉬고 걸어 다닐 때, 인간 생존에 필요한 최소한의 공기, 맑은 물, 자원 등 100가지 필수 생활 요소들이 가로막히지 않고 온전히 보존될 수 있도록 기술적 보호막을 마련하는 일입니다.
+                                    </p>
+                                    <p>
+                                        과거의 수많은 사람들이 땀을 흘려 오늘이라는 깨끗한 하루를 저에게 마련해 주었듯, 저 또한 성실하게 준비하고 '대비'하여 미래의 사회구성원에게 '내일이라는 선물'을 온전히 이양해 주고 싶습니다. 눈에 크게 도드라지지 않더라도, 지구 구석의 완벽한 수처리 기계와 청정 소각 시스템 뒤에서 묵묵하게 쓰임받는 든든한 환경 엔지니어 서민서로 살아가겠습니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. SECTION 5: GATHER (인터랙티브 소통 관 - 연대 월) -->
+    <section id="gather" class="py-24 bg-forest-900 text-sand-50 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-terracotta-500 font-bold uppercase tracking-widest text-xs block mb-2">Space of Resonance</span>
+                <h2 class="font-serif text-2xl sm:text-3xl font-black mb-4 text-white">비슷한 주파수의 소통을 희망하는 당신에게</h2>
+                <p class="text-sand-100/70 max-w-lg mx-auto font-light text-sm sm:text-base">
+                    소통해요~
+                </p>
+                <div class="w-16 h-1 bg-terracotta-500 mx-auto mt-6"></div>
+            </div>
+
+            <!-- 동적 주파수 방명록 입력부 -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+                <!-- 입력 양식 -->
+                <div class="md:col-span-5 bg-forest-800/50 border border-sand-200/10 p-6 rounded-xl">
+                    <h4 class="font-serif text-base font-bold text-sand-50 mb-4">새로운 신호 쏘아보내기</h4>
+                    <form id="frequency-form" onsubmit="event.preventDefault(); addFrequency();" class="space-y-4">
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-sand-200/70 mb-1" for="nickname">이름 또는 가명</label>
+                            <input class="w-full bg-forest-900 border border-sand-200/20 text-sand-50 p-2.5 rounded text-xs focus:outline-none focus:border-terracotta-500" type="text" id="nickname" placeholder="관찰자_A" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-sand-200/70 mb-1" for="message">당신이 꿈꾸는 내일의 평화 / 한마디</label>
+                            <textarea class="w-full bg-forest-900 border border-sand-200/20 text-sand-50 p-2.5 rounded text-xs h-24 focus:outline-none focus:border-terracotta-500 resize-none" id="message" placeholder="오늘도 저에겐 기적 같은 하루입니다. 환경공학의 비전을 진심으로 응원합니다." required></textarea>
+                        </div>
+                        <button class="w-full bg-terracotta-500 text-sand-50 py-3 rounded-lg hover:bg-terracotta-600 transition-colors font-bold text-xs shadow" type="submit">
+                            주파수 수신함에 기록하기
+                        </button>
+                    </form>
+                </div>
+
+                <!-- 수신 월 (방명록 출력 공간) -->
+                <div class="md:col-span-7 flex flex-col h-[350px]">
+                    <h4 class="font-serif text-base font-bold text-sand-50 mb-4 flex items-center justify-between">
+                        <span>수신된 주파수 공간 (Live Connection)</span>
+                        <span class="text-xs bg-forest-800 border border-sand-200/20 text-terracotta-500 px-2 py-0.5 rounded font-mono" id="connection-count">3 signals</span>
+                    </h4>
+                    <div id="signal-wall" class="flex-grow overflow-y-auto space-y-4 pr-2 max-h-[300px]">
+                        <!-- Default Signals -->
+                        <div class="p-4 bg-forest-800/40 rounded border border-sand-200/5 text-xs text-sand-100/90 space-y-2">
+                            <p class="font-semibold text-terracotta-500 flex justify-between items-center">
+                                <span>@마야</span>
+                                <span class="text-[10px] text-slate-400 font-mono">2026.06.14</span>
+                            </p>
+                            <p class="leading-relaxed text-justify-custom text-xs">
+                                제주 플로깅 가신다니 가슴이 뜁니다! 삶을 당연하게 향유하지 않고 내일을 향한 '대비'로 승화시킨 자세에 많은 영감을 받고 갑니다.
+                            </p>
+                        </div>
+                        <div class="p-4 bg-forest-800/40 rounded border border-sand-200/5 text-xs text-sand-100/90 space-y-2">
+                            <p class="font-semibold text-terracotta-500 flex justify-between items-center">
+                                <span>@이승문</span>
+                                <span class="text-[10px] text-slate-400 font-mono">2026.06.13</span>
+                            </p>
+                            <p class="leading-relaxed text-justify-custom text-xs">
+                                요구가 아닌 관찰이라는 말, 정말 깊게 와닿습니다. 우리가 가졌던 소통 없는 일상이 부끄러워지네요. 웹페이지 포트폴리오 정말 아름답습니다. 기말 과제 꼭 만점 받으세요!
+                            </p>
+                        </div>
+                        <div class="p-4 bg-forest-800/40 rounded border border-sand-200/5 text-xs text-sand-100/90 space-y-2">
+                            <p class="font-semibold text-terracotta-500 flex justify-between items-center">
+                                <span>@구영서</span>
+                                <span class="text-[10px] text-slate-400 font-mono">2026.06.12</span>
+                            </p>
+                            <p class="leading-relaxed text-justify-custom text-xs">
+                                ETH Zurich 진학해서 멋진 미래를 연출하실 날을 손꼽아 기다리겠습니다. 대비와 공학의 가치관을 저 또한 배워갑니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FOOTER -->
+    <footer class="bg-forest-900 border-t border-forest-800 text-slate-500 py-12 text-center text-sm font-light">
+        <div class="max-w-6xl mx-auto px-6 space-y-4">
+            <p class="font-serif font-black text-sand-50 tracking-widest text-lg">THE WEB STAGE</p>
+            <p class="text-sand-100/40 max-w-md mx-auto text-xs sm:text-sm">
+                본 웹페이지는 대학교 &lt;ACT&gt; 기말 개인 과제물입니다.
+            </p>
+            <div class="pt-4 border-t border-forest-800 text-xs">
+                © 2026 Creative Life Stage Project. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- 인터랙티브 스크립트 -->
+    <script>
+        /* 0. 오늘이라는 선물 갤러리 이미지/캡션 전환 함수 */
+        function changeGiftView(imgSrc, captionText, element) {
+            const mainImg = document.getElementById('gift-main-img');
+            const caption = document.getElementById('gift-caption');
+            
+            // 메인 뷰어 페이드아웃 후 전환 효과
+            mainImg.style.opacity = '0';
+            caption.style.opacity = '0';
+            
+            setTimeout(() => {
+                mainImg.src = imgSrc;
+                caption.innerHTML = captionText;
+                mainImg.style.opacity = '0.95';
+                caption.style.opacity = '1';
+            }, 300);
+
+            // 선택된 썸네일 활성화 테두리 조절
+            const allBtns = document.querySelectorAll('.thumbnail-btn');
+            allBtns.forEach(btn => {
+                btn.classList.remove('border-terracotta-500');
+                btn.classList.add('border-slate-200');
+            });
+            element.classList.add('border-terracotta-500');
+            element.classList.remove('border-slate-200');
+        }
+
+        /* 0.1 대비 섹션 보이지 않는 노동 갤러리 전환 함수 */
+        function changeContrastView(imgSrc, captionText, element) {
+            const mainImg = document.getElementById('contrast-main-img');
+            const caption = document.getElementById('contrast-caption');
+            
+            // 메인 뷰어 페이드아웃 효과 적용
+            mainImg.style.opacity = '0';
+            caption.style.opacity = '0';
+            
+            setTimeout(() => {
+                mainImg.src = imgSrc;
+                caption.innerHTML = captionText;
+                mainImg.style.opacity = '0.95';
+                caption.style.opacity = '1';
+            }, 300);
+
+            // 탭 버튼 스타일 갱신
+            const allBtns = document.querySelectorAll('.contrast-tab-btn');
+            allBtns.forEach(btn => {
+                btn.classList.remove('border-terracotta-500');
+                btn.classList.add('border-slate-200');
+                // 배지 컬러 초기화
+                const badge = btn.querySelector('span');
+                if(badge) {
+                    badge.classList.remove('text-terracotta-500');
+                    badge.classList.add('text-slate-400');
+                }
+            });
+            
+            element.classList.add('border-terracotta-500');
+            element.classList.remove('border-slate-200');
+            const activeBadge = element.querySelector('span');
+            if(activeBadge) {
+                activeBadge.classList.add('text-terracotta-500');
+                activeBadge.classList.remove('text-slate-400');
+            }
+        }
+
+        /* 1. 관찰 섹션 멀티 페이지 변환 제어 */
+        function switchObsPage(pageNo) {
+            // 모든 관찰 페이지 숨기기
+            for (let i = 1; i <= 4; i++) {
+                document.getElementById('obs-page-' + i).classList.add('hidden');
+                document.getElementById('obs-page-' + i).classList.remove('block');
+                
+                // 탭 스타일 초기화
+                const tab = document.getElementById('obs-tab-' + i);
+                tab.classList.remove('border-terracotta-500', 'text-terracotta-500');
+                tab.classList.add('text-sand-200/50', 'hover:text-sand-50');
+            }
+            
+            // 지정한 페이지만 활성화
+            const activePage = document.getElementById('obs-page-' + pageNo);
+            activePage.classList.remove('hidden');
+            activePage.classList.add('block');
+            
+            // 활성 탭 스타일 지정
+            const activeTab = document.getElementById('obs-tab-' + pageNo);
+            activeTab.classList.add('border-terracotta-500', 'text-terracotta-500');
+            activeTab.classList.remove('text-sand-200/50', 'hover:text-sand-50');
+        }
+
+        /* 2. 타임라인(인생 궤적) 멀티 페이지 변환 제어 */
+        function switchTimePage(pageNo) {
+            // 모든 궤적 페이지 숨기기
+            for (let i = 1; i <= 5; i++) {
+                document.getElementById('time-page-' + i).classList.add('hidden');
+                document.getElementById('time-page-' + i).classList.remove('block');
+                
+                // 네비게이션 버튼 스타일 초기화
+                const btn = document.getElementById('time-btn-' + i);
+                btn.classList.remove('bg-terracotta-500', 'text-sand-50');
+                btn.classList.add('bg-forest-800', 'hover:bg-forest-100/10', 'text-sand-200');
+                
+                // 내부 넘버 배지 클래스 원복
+                const badge = btn.querySelector('span');
+                badge.classList.remove('text-sand-200');
+                badge.classList.add('text-sand-200/50');
+            }
+
+            // 지정한 궤적 활성화
+            const activePage = document.getElementById('time-page-' + pageNo);
+            activePage.classList.remove('hidden');
+            activePage.classList.add('block');
+
+            // 활성 버튼 스타일 지정
+            const activeBtn = document.getElementById('time-btn-' + pageNo);
+            activeBtn.classList.add('bg-terracotta-500', 'text-sand-50');
+            activeBtn.classList.remove('bg-forest-800', 'hover:bg-forest-100/10', 'text-sand-200');
+
+            // 활성 넘버 배지 밝기 복구
+            const activeBadge = activeBtn.querySelector('span');
+            activeBadge.classList.add('text-sand-200');
+            activeBadge.classList.remove('text-sand-200/50');
+        }
+
+        /* 3. 방명록 수신함 함수 */
+        function addFrequency() {
+            const nickInput = document.getElementById('nickname');
+            const msgInput = document.getElementById('message');
+            const wall = document.getElementById('signal-wall');
+            const countBadge = document.getElementById('connection-count');
+
+            const nickname = nickInput.value.trim();
+            const message = msgInput.value.trim();
+
+            if (!nickname || !message) return;
+
+            // 현재 날짜 스트링 구하기
+            const today = new Date();
+            const dateStr = today.getFullYear() + '.' + 
+                            String(today.getMonth() + 1).padStart(2, '0') + '.' + 
+                            String(today.getDate()).padStart(2, '0');
+
+            // 새로운 방명록 요소 생성
+            const card = document.createElement('div');
+            card.className = "p-4 bg-forest-800/60 rounded border border-terracotta-500/20 text-xs text-sand-100/90 space-y-2 opacity-0 transition-opacity duration-500";
+            card.innerHTML = `
+                <p class="font-semibold text-terracotta-500 flex justify-between items-center">
+                    <span>@${nickname}</span>
+                    <span class="text-[10px] text-slate-400 font-mono">${dateStr}</span>
+                </p>
+                <p class="leading-relaxed text-justify-custom text-xs">
+                    ${message}
+                </p>
+            `;
+
+            // 맨 위에 삽입 및 폼 초기화
+            wall.insertBefore(card, wall.firstChild);
+            
+            // 레이아웃이 잡힌 후 부드럽게 나타나는 효과 적용
+            setTimeout(() => {
+                card.classList.remove('opacity-0');
+            }, 50);
+
+            nickInput.value = '';
+            msgInput.value = '';
+
+            // 카운트 계산 업데이트
+            const count = wall.children.length;
+            countBadge.innerText = `${count} signals`;
+            
+            // 신호 월 최상단 스크롤
+            wall.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
